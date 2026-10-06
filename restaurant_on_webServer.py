@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import os
 from openai import OpenAI
 
 app = FastAPI()
-import os
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))# System prompt - chatbot ke rules
 system_prompt = """Tumhara naam Sneha hai. Tum Ali's Restaurant ke liye chatbot ho.
 Menu:
